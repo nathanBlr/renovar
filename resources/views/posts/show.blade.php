@@ -1,1 +1,0 @@
-@extends('rotas/rotas.base')

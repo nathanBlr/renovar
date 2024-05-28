@@ -1,67 +1,29 @@
 @extends('rotas.base')
-@section('title', 'Inicio')
-@section('pagina')
-<div class="">
-             <img class="h-auto ax-w-full mx-auto rounded-lg shadow-xl dark:shadow-gray-800" src="{{ asset('santacasa faxada.webp') }}" alt="image description">          
-    </div>
 
-    <center><div id="default-carousel" class="relative w-full" data-carousel="slide">
+@section('title', 'Início')
+
+@section('content')
+
+<div class="relative">
+    <!-- Carrossel -->
+    <div id="default-carousel" class="relative w-full h-screen bg-slate-600" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-255">
+        <div class="relative h-full overflow-hidden rounded-lg">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'inicio') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Inicio</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>                
+                <img src="{{ asset('Fotos/Santa-Casa-da-Misericordia-de-Ferreira-do-zezere-IMG_5998.webp') }}" class="absolute inset-0 w-full h-full object-cover" alt="...">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'historia') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Historia</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
+                <img src="{{ asset('Fotos/IMG_4197.JPG') }}" class="absolute inset-0 w-full h-full object-cover" alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'noticias') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Notícias</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
-
-
+                <img src="{{ asset('Fotos/SCMFZ.jpg') }}" class="absolute inset-0 w-full h-full object-cover" alt="...">
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'valencia') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Valências</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
-            </div>
-            <!-- Item 5 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'galeria') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Galeria</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'documentacao') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Documentação</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'projetos') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Projetos</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
-            </div>
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <a href="{{ route('rotas.index', 'contato') }}" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Contatos</h5>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                </a>   
+                <img src="{{ asset('Fotos/05.jpg') }}" class="absolute inset-0 w-full h-full object-cover" alt="...">
             </div>
         </div>
         <!-- Slider indicators -->
@@ -71,9 +33,6 @@
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6" data-carousel-slide-to="5"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7" data-carousel-slide-to="6"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 8" data-carousel-slide-to="7"></button>
         </div>
         <!-- Slider controls -->
         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -92,19 +51,90 @@
                 <span class="sr-only">Next</span>
             </span>
         </button>
-    </div></center>    
-    
-        <a href="{{ route('rotas.index','projetos')}}" class="flex flex-col items-center mx-auto bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="{{ asset('projetos.webp') }}" alt="">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Centro de Convívio e ATL</h5>
-                <h6 class="mb-2 text-xl font-bold tracking-tight text-gray-9"></h6>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Em setembro de 2020 foi inaugurado o Centro de Convívio para idosos e ATL da Santa Casa da Misericórdia de Ferreira do Zêzere.</p>
-            </div>
-        </a>
-
-
-          
+    </div>
 </div>
-@endsection
 
+
+
+
+
+<!-- Seções de conteúdo em cards e carrosséis -->
+<div class="container mx-auto mt-8">
+    <!-- Seção de destaques -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card de destaque com o vídeo -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Vídeo das Atividades da Santa Casa</h2>
+            <!-- Substitua 'URL_DO_SEU_VIDEO' pelo link do seu vídeo -->
+            <div class="responsive-video">
+                <iframe width="100%" src="https://www.youtube.com/embed/nmUu-osKmEk" title="Marcha da Santa Casa da Misericórdia de Ferreira do Zêzere 2015" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p>Proporcionamos consultas médicas gratuitas para membros da comunidade em situação financeira desfavorável. Nosso objetivo é garantir que todos tenham acesso aos cuidados de saúde de que precisam, independentemente de sua capacidade de pagamento</p>
+            <a href="https://youtu.be/nmUu-osKmEk" class="text-blue-500 mt-2 inline-block hover:underline">Assistir Agora</a>
+        </div>
+    
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Clínica Médica Gratuita</h2>
+            <img src="{{ asset('Fotos/fz-vicente-saude-0169990085_818233773257400062_n-780x470.jpg') }}" alt="Imagem Clínica Médica" class="w-full h-auto rounded-lg mb-4">
+            <p>Proporcionamos consultas médicas gratuitas para membros da comunidade em situação financeira desfavorável. Nosso objetivo é garantir que todos tenham acesso aos cuidados de saúde de que precisam, independentemente de sua capacidade de pagamento</p>
+            <a href="#" class="text-blue-500 mt-2 inline-block hover:underline">Saiba mais</a>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold mb-2">Nossa História</h2>
+            <img src="{{ asset('Fotos/Dornes_resultado.jpg') }}" alt="Foto Histórica de Ferreira de Zêzere" class="w-full h-auto rounded-lg mb-4">
+            <p>A Santa Casa da Misericórdia de Ferreira de Zêzere, fundada há décadas, é um pilar na comunidade local. Nosso compromisso em fornecer assistência médica, apoio social e cuidados de qualidade continua a moldar a história de Ferreira de Zêzere. Saiba mais sobre nossa trajetória na seção de História</p>
+            <a href="#" class="text-blue-500 mt-2 inline-block hover:underline">Saiba mais</a>
+        </div>
+        
+        
+        <!-- Adicione mais cards de destaque aqui, se necessário -->
+    </div>
+    
+
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative">
+                <img src="{{ asset('Fotos/fz-vicente-saude-0169990085_818233773257400062_n-780x470.jpg') }}" alt="Imagem 1" class="w-full h-64 object-cover object-center rounded-t-lg">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <a href="#" class="block bg-blue-500 text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-blue-600">Detalhes</a>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Título da Notícia 1</h3>
+                <p class="text-gray-700 mb-4">Descrição breve da notícia ou projeto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="relative">
+                <img src="{{ asset('Fotos/SCMFZ.jpg') }}" alt="Imagem 2" class="w-full h-64 object-cover object-center rounded-t-lg">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <a href="#" class="block bg-blue-500 text-white text-center font-semibold py-2 px-4 rounded-lg hover:bg-blue-600">Detalhes</a>
+                </div>
+            </div>
+            <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Título da Notícia 2</h3>
+                <p class="text-gray-700 mb-4">Descrição breve da notícia ou projeto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    
+        <!-- Adicione mais cards a
+    
+    
+</div>
+
+<!-- Inicialize o carrossel -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+@endsection

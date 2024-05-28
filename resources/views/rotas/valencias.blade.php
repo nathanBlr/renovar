@@ -1,12 +1,12 @@
 @extends('rotas.base')
 
-@section('title', 'Notícias')
+@section('title', 'Valências')
 
 @section('content')
 <div class="bg-white p-6 rounded shadow-md">
-    <h1 class="text-2xl font-bold">Notícias</h1>
+    <h1 class="text-2xl font-bold">Valências</h1>
     <div class="mt-4">
-        <!-- Listagem de notícias -->
+        <!-- Listagem de serviços oferecidos -->
     </div>
 </div>
 @endsection
