@@ -67,7 +67,7 @@
 </head>
 <body class="bg-white text-gray-800">
     <header>
-        <nav class="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-md dark:bg-neutral-700 lg:py-4">
+        <nav class="relative  flex w-full flex-wrap items-center justify-between bg-[#E5E7EB] py-2 shadow-md dark:bg-neutral-700 lg:py-4">
     <div class="flex w-full flex-wrap items-center justify-between px-3">
         <!-- Logo and Title -->
         <div class="flex items-center">
@@ -103,9 +103,8 @@
             <a href="{{ route('rotas.index','noticias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Notícias</a>
             <a href="{{ route('rotas.index','valencias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Valências</a>
             <a href="{{ route('rotas.index','documentacao') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Documentação</a>
-            <a href="{{ route('rotas.index','galeria') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Galeria</a>
             <a href="{{ route('rotas.index','projetos') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Projetos</a>
-            <a href="#footer" class="text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Contatos</a>
+            <a href="{{ route('rotas.index','contatos') }}" class="text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Contatos</a>
         </div>
     </div>
 </nav>
@@ -127,6 +126,27 @@
 
     <main class=" justify-center">
         @yield('content')
+        <!-- Back to top button -->
+<button
+  type="button"
+  data-twe-ripple-init
+  data-twe-ripple-color="light"
+  class="!fixed bottom-5 end-5 hidden rounded-full bg-[#68c8e3] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+  id="btn-back-to-top">
+  <span class="[&>svg]:w-4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="3"
+      stroke="currentColor">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+  </span>
+</button>
     </main>
     <!-- Loading Overlay -->
 
@@ -135,7 +155,7 @@
     <footer class="bg-gray-200 mt-10 py-6" id="footer">
     <div class="container mx-auto text-center">
         <!-- Social Media Links -->
-        <div class="flex justify-center space-x-6 mb-4">
+        <div class="flex justify-center space-x-2 mb-4">
             <a href="#" class="loading-link">
             <button
                 type="button"
@@ -231,11 +251,10 @@
                 </button>
                 </a>
         </div>
-
-        <!-- Footer Content -->
+<!-- Footer Content -->
         <div class="flex flex-wrap justify-center mt-8">
             <!-- Contact Form -->
-            <div class="w-full md:w-1/3 p-4">
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
                 <h2 class="text-xl font-bold mb-4">Contact Us</h2>
                 <form action="#" method="POST">
                     <div class="mb-4">
@@ -252,17 +271,15 @@
             </div>
 
             <!-- Map -->
-            <hr class="my-12 h-0.5 border-t-0 bg-gray-950 dark:bg-white/10" />
-            <div class="w-full md:w-1/3 p-4">
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
                 <h2 class="text-xl font-bold mb-4">Our Location</h2>
-                <div class="h-64">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9231967801164!2d-122.0842496!3d37.4220655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4c1f1f8e0e1%3A0x4d8b8f9f3a8e14e7!2sGoogleplex!5e0!3m2!1sen!2sus!4v1597488271184!5m2!1sen!2sus" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div class="h-48 md:h-64">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.246492905064!2d-8.294144824024869!3d39.68916147156596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd229d5eb9a065d7%3A0xb8b67318c1e597fd!2sSanta%20Casa%20da%20Miseric%C3%B3rdia%20de%20Ferreira%20do%20Z%C3%AAzere!5e0!3m2!1sen!2spt!4v1717428749997!5m2!1sen!2spt" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
-            <hr class="my-12 h-0.5 border-t-0 bg-gray-950 dark:bg-white/10" />
+
             <!-- Additional Information -->
-            
-            <div class="w-full md:w-1/3 p-4">
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
                 <h2 class="text-xl font-bold mb-4">Justifiable Information</h2>
                 <ul class="text-left">
                     <li><strong>Address:</strong> 123 Main Street, Anytown, AN 12345</li>
@@ -279,6 +296,7 @@
         </div>
     </div>
 </footer>
+
 
 
     <script>

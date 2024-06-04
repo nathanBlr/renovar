@@ -87,130 +87,224 @@
 
 
 <!-- Navbar -->
-<nav class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto">
-        <!-- Navbar content here -->
-        <div class="flex justify-between items-center">
-            <a href="#" class="text-white hover:text-gray-200">Link 1</a>
-            <a href="#" class="text-white hover:text-gray-200">Link 2</a>
-            <a href="#projetos" class="text-white hover:text-gray-200">Projetos</a>
-            <!-- Add more links as needed -->
-        </div>
-    </div>
+<nav class="bg-[#E5E7EB] text-[#68c8e3] py-4">
+  <div class="container mx-auto">
+      <!-- Navbar content here -->
+      <div class="flex justify-between items-center">
+          <!-- Logo or site name can be placed here for mobile -->
+          <a  class="block lg:hidden" id="toggleMenu">
+              <!-- Hamburger icon -->
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+          </a>
+          <a href="{{ route('rotas.index','historia') }}" class="loading-link hidden lg:block font-bold text-[#68c8e3] hover:text-gray-800 ">Historia</a>
+          <a href="#footer" class="hidden lg:block font-bold text-[#68c8e3] hover:text-gray-800">Contatos</a>
+          <a href="{{ route('rotas.index','projetos') }}" class="loading-link hidden lg:block font-bold text-[#68c8e3] hover:text-gray-800">Projetos</a>
+          <a href="{{ route('rotas.index','noticias') }}" class="loading-link hidden lg:block font-bold text-[#68c8e3] hover:text-gray-800">Notícias</a>
+          <a href="{{ route('rotas.index','documentacao') }}" class="loading-link hidden lg:block font-bold text-[#68c8e3] hover:text-gray-800">Documentação</a>
+          <!-- Add more links as needed -->
+      </div>
+  </div>
+
+  <!-- Mobile navigation menu -->
+  <div id="opcao" class="hidden lg:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#historia" class="block font-bold text-[#68c8e3] hover:text-gray-800">Historia</a>
+        <a href="#footer" class="block font-bold text-[#68c8e3] hover:text-gray-800">Contatos</a>
+        <a href="#projetos" class="block font-bold text-[#68c8e3] hover:text-gray-800">Projetos</a>
+        <a href="#noticias" class="block font-bold text-[#68c8e3] hover:text-gray-800">Notícias</a>
+        <a href="#documentacao" class="block font-bold text-[#68c8e3] hover:text-gray-800">Documentação</a>        
+          <!-- Add more links as needed -->
+      </div>
+  </div>
 </nav>
+
+
+<!-- Noticias -->
 <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
-
-
-
-
-<!-- Seções de conteúdo em cards e carrosséis -->
-<section class="container mx-auto mt-16">
-    <h2 class="text-3xl font-bold mb-8">Notícias e Eventos</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<section id="noticias" class="container mx-auto mt-16">
+  <h2 class="text-3xl font-bold mb-8 text-center">Ultimas Notícias</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="card rounded-lg shadow-md p-4">
-        <img src="{{ asset('Fotos/noticia1.jpg') }}" alt="Imagem da Notícia 1" class="w-full h-200 object-cover object-center rounded-lg mb-4">
-        <h3 class="text-lg font-bold mb-2">Título da Notícia 1</h3>
-        <p class="text-gray-700 mb-4">Descrição breve da notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-       
-    </div>
-    <a href="{{ route('rotas.index', 'noticias') }}" class="loading-link bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><button>
-      Noticias
-        </button></a>
+          <img src="{{ asset('Fotos/notícias-34802664.webp') }}" alt="Imagem da Notícia 1" class="w-full h-200 object-cover object-center rounded-lg mb-4">
+          <h3 class="text-lg font-bold mb-2">Título da Notícia 1</h3>
+          <p class="text-gray-700 mb-4">Descrição breve da notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="card rounded-lg shadow-md p-4">
-        <img src="{{ asset('Fotos/noticia2.jpg') }}" alt="Imagem da Notícia 2" class="w-full h-200 object-cover object-center rounded-lg mb-4">
-        <h3 class="text-lg font-bold mb-2">Título da Notícia 2</h3>
-        <p class="text-gray-700 mb-4">Descrição breve da notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <img src="{{ asset('Fotos/fundo-do-boletim-de-noticias-da-terra-de-tecnologia-global_1017-33687.avif') }}" alt="Imagem da Notícia 2" class="w-full h-200 object-cover object-center rounded-lg mb-4">
+          <h3 class="text-lg font-bold mb-2">Título da Notícia 2</h3>
+          <p class="text-gray-700 mb-4">Descrição breve da notícia. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-    </div>
-  </section>
-  <section class="container mx-auto mt-16 bg-gray-100 py-8" >
-    <div class="flex flex-col items-center justify-center text-center">
-      <h2 class="text-3xl font-bold mb-4">Em Busca de Documentação?</h2>
-      <p class="text-gray-700 mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>
-      <a href="{{ route('rotas.index','documentacao') }}" class="loading-link px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Saiba Mais</a>
-    </div>
-  </section>
-  <section class="container mx-auto mt-16" >
-    <h2 class="text-3xl font-bold mb-8">Conheça um Pouco de nossa historia</h2>
-    <div class="flex flex-col items-center justify-center text-center">
-      <h2 class="text-3xl font-bold mb-4">Junte-se a nós e faça a diferença!</h2>
-      <p class="text-gray-700 mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>
-      <a href="{{ route('rotas.index','historia') }}" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Saiba Mais</a>
-    </div>
-  </section>
-  <section class="container mx-auto mt-16 bg-gray-100 py-8" >
-    <div class="flex flex-col items-center justify-center text-center">
-      <h2 class="text-3xl font-bold mb-4">Busca Mais Informações?</h2>
-      <p class="text-gray-700 mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>
-      <a href="#footer" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Saiba Mais</a>
-    </div>
-  </section>
-  <section class="container mx-auto mt-16 bg-gray-100 py-8" >
-    <div class="flex flex-col items-center justify-center text-center">
-      <h2 class="text-3xl font-bold mb-4">Junte-se a nós e faça a diferença!</h2>
-      <p class="text-gray-700 mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>
-      <a href="#footer" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">Saiba Mais</a>
-    </div>
-  </section>
-  <section id="projetos" class="container mx-auto mt-16 bg-white py-8">
-    <div class="flex flex-col items-center justify-center text-center">
-        <h2 class="text-3xl font-bold mb-4 font-fredericka">Projetos</h2>
-        <a href="{{ route('rotas.index','projetos') }}" class="loading-link flex items-center w-full  border text-gray-900 border-gray-200 rounded-lg shadow hover:text-[#68c8e3] hover:bg-gray-200 focus:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700 transition duration-300 ease-in-out">
-          <img class="w-48 h-48 rounded-full shadow-lg" src="{{ asset('Fotos/05.jpg') }}" alt="Bonnie image"/>
-          <div class="p-4">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight font-fredericka dark:text-white">Noteworthy technology acquisitions 2021</h5>
-              <p class="mb-3 font-normal font-serif dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          </div>
+  </div>
+  <div class="flex justify-center mt-8">
+      <a href="{{ route('rotas.index', 'noticias') }}" class="loading-link bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
+          <button>
+              Noticias
+          </button>
       </a>
-  
-        <a href="{{ route('rotas.index','projetos') }}" class="loading-link flex items-center w-full  border text-gray-900 border-gray-200 rounded-lg shadow hover:text-[#68c8e3] hover:bg-gray-200 focus:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700 transition duration-300 ease-in-out">
-          <img class="w-48 h-48 rounded-full shadow-lg" src="{{ asset('Polo II.webp') }}" alt="Bonnie image"/>
-          <div class="p-4">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight font-fredericka dark:text-white">Noteworthy technology acquisitions 2021</h5>
-              <p class="mb-3 font-normal font-serif dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          </div>
-      </a>
-      
-      <a href="{{ route('rotas.index','projetos') }}" class="loading-link flex items-center w-full  border text-gray-900 border-gray-200 rounded-lg shadow hover:text-[#68c8e3] hover:bg-gray-200 focus:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700 transition duration-300 ease-in-out">
-        <img class="w-48 h-48 rounded-full shadow-lg" src="{{ asset('projetos.webp') }}" alt="Bonnie image"/>
-        <div class="p-4">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight font-fredericka dark:text-white">Noteworthy technology acquisitions 2021</h5>
-            <p class="mb-3 font-normal font-serif dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+  </div>
+</section>
+
+
+
+<!-- Documentação -->
+  <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+  <section id="documentacao" class="container mx-auto mt-8 bg-gray-100 py-4 sm:py-8">
+    <div class="max-w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col sm:flex-row">
+        <a class="flex-none sm:w-1/2">
+            <img class="rounded-t-lg sm:rounded-l-lg sm:rounded-t-none w-full h-48 sm:h-full object-cover" src="{{ asset('documents.webp') }}" alt="Image Description" />
+        </a>
+        <div class="p-4 sm:p-5 flex-1 flex flex-col justify-between">
+            <div>
+                <a >
+                    <h5 class="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Em Busca De Documentação?</h5>
+                </a>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm sm:text-base pt-5">Aqui você encontra todos os documentos relacionados à nossa instituição. Explore uma coleção abrangente que abrange diversas áreas de interesse e mantenha-se atualizado com as informações mais recentes. Descubra mais sobre nossas iniciativas, projetos e muito mais.</p>
+            </div>
+            <a href="{{ route('rotas.index', 'documentacao')}}" class="inline-block w-full sm:w-auto items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                
+            </a>
         </div>
-    </a>
     </div>
 </section>
 
+<!-- Historia -->
+<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<section id="historia" class="container mx-auto mt-16">
+    <h2 class="text-3xl font-bold mb-8 text-center">Conheça um Pouco de Nossa História</h2>
+    <div class="w-full">
+        <img class="rounded-lg w-full h-auto object-cover" src="{{ asset('Fotos/rio-zezere.jpg') }}" alt="Foto Antiga da Instituição" />
+    </div>
+    <div class="w-full p-6 md:p-10 text-center">
+        <h2 class="text-4xl font-bold mb-6 text-blue-700">Junte-se a nós e faça a diferença!</h2>
+        <p class="text-gray-700 text-lg mb-8">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos. Venha conhecer mais sobre nossa história e como você pode contribuir para um futuro melhor. Nossa trajetória é marcada por muitas conquistas e você pode fazer parte dela!</p>
+        <a href="{{ route('rotas.index', 'historia') }}" class="px-5 py-3 bg-blue-500 text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">Saiba Mais</a>
+    </div>
+</section>
+
+
+<!-- Contatos -->
+<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<section class="w-full mx-auto mt-16 bg-gray-100 py-8">
+    <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-6">
+        <div class="flex flex-col items-center justify-center text-center mb-6">
+            <h2 class="text-3xl font-bold mb-4">Busca Mais Informações?</h2>
+            <p class="text-gray-700 mb-6">Entre em contacto por meio de nossas redes sociais</p>
+        </div>
+        <div class="flex justify-around mb-6">
+            <img class="w-1/4 rounded-lg" src="{{ asset('Fotos/getty_991166232_2000135220009280424_402970.jpg') }}" alt="Imagem 1" />
+            <img class="w-1/4 rounded-lg" src="{{ asset('Fotos/Wooden_There-Is-No-Greater-Joy-in-Life-Than-Helping-Others-1024x682.jpg') }}" alt="Imagem 2" />
+            <img class="w-1/4 rounded-lg" src="{{ asset('Fotos/Customer_care.jpg') }}" alt="Imagem 3" />
+        </div>
+        <div class="flex justify-center">
+            <a href="#footer" class="px-5 py-3 bg-blue-500 text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">Contatos</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projetos -->
+<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<section id="projetos" class="container mx-auto mt-16 bg-white py-8">
+    <div class="flex flex-col items-center justify-center text-center">
+        <h2 class="text-3xl font-bold mb-4 font-fredericka">Projetos</h2>
+        <h2 class="text-3xl font-bold mb-4">Junte-se a nós e faça a diferença!</h2>
+        <p class="text-gray-700 mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>     
+        <a href="{{ route('rotas.index','projetos') }}" class="loading-link flex flex-col md:flex-row items-center w-full mb-6 border text-gray-900 border-gray-200 rounded-lg shadow hover:text-[#68c8e3] hover:bg-gray-200 focus:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700 transition duration-300 ease-in-out">
+            <img class="w-48 h-48 md:w-48 md:h-auto rounded-lg shadow-lg md:mr-4" src="{{ asset('Fotos/05.jpg') }}" alt="Bonnie image"/>
+            <div class="p-4">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight font-fredericka dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                <p class="mb-3 font-normal font-serif dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+        </a>
+        <a href="{{ route('rotas.index','projetos') }}" class="loading-link flex flex-col md:flex-row items-center w-full mb-6 border text-gray-900 border-gray-200 rounded-lg shadow hover:text-[#68c8e3] hover:bg-gray-200 focus:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700 transition duration-300 ease-in-out">
+            <img class="w-48 h-48 md:w-48 md:h-auto rounded-lg shadow-lg md:mr-4" src="{{ asset('Polo II.webp') }}" alt="Bonnie image"/>
+            <div class="p-4">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight font-fredericka dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                <p class="mb-3 font-normal font-serif dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+        </a>
+        <a href="{{ route('rotas.index','projetos') }}" class="loading-link flex flex-col md:flex-row items-center w-full mb-6 border text-gray-900 border-gray-200 rounded-lg shadow hover:text-[#68c8e3] hover:bg-gray-200 focus:bg-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:bg-gray-700 transition duration-300 ease-in-out">
+            <img class="w-48 h-48 md:w-48 md:h-auto rounded-lg shadow-lg md:mr-4" src="{{ asset('projetos.webp') }}" alt="Bonnie image"/>
+            <div class="p-4">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight font-fredericka dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                <p class="mb-3 font-normal font-serif dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+<!-- Galeria -->
+<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
   <section class="container mx-auto mt-16 bg-gray-100 py-8" >
     <!-- UM CARROUSEL COM AS FOTOS DA GALERIA -->
     <div class="flex flex-col items-center justify-center text-center">
       <h2 class="text-3xl font-bold mb-4">GALERIA</h2>
-      <p class="text-gray-700 mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>
     </div>
+      <div
+    id="carouselExampleSlidesOnly"
+    class="relative"
+    data-twe-carousel-init
+    data-twe-ride="carousel">
+    <!--Carousel items-->
+    <div
+      class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <!--First item-->
+      <div
+        class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-twe-carousel-item
+        data-twe-carousel-active>
+        <img
+          src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+          class="block w-full  rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30 "
+          alt="Wild Landscape" />
+      </div>
+      <!--Second item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-twe-carousel-item>
+        <img
+          src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+          class="block w-full"
+          alt="Camera" />
+      </div>
+      <!--Third item-->
+      <div
+        class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+        data-twe-carousel-item>
+        <img
+          src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+          class="block w-full"
+          alt="Exotic Fruits" />
+      </div>
+    </div>
+  </div>
+  <p class="text-gray-700 text-center font-bold mb-6">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos.</p>
   </section>
 
 
+  <!-- Valencias -->
+<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
 <section class="container mx-auto mt-16 bg-gray-100 py-8" >
   <div class="flex justify-center">
     <h2 class="text-3xl font-bold mb-4">Venha Conhecer Nossas Valencias</h2>
 </div>
   <div class="flex flex-col md:flex-row col-span-3 items-center justify-center text-center">
-    
     <div class="md:w-1/3 mx-2 mb-4">
         <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
         </div>
     </div>
-
     <div class="md:w-1/3 mx-2 mb-4">
         <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
         </div>
     </div>
-
     <div class="md:w-1/3 mx-2 mb-4">
         <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-5">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
@@ -218,14 +312,16 @@
         </div>
     </div>
 </div>
-
 <div class="flex justify-center">
     <a href="{{ route('rotas.index','valencias') }}" class="loading-link px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mt-4">Saiba Mais</a>
 </div>
-
-
 </section>
-  
+<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>  
  
-  
+<script>
+  document.getElementById('toggleMenu').addEventListener('click', function() {
+    var menu = document.getElementById('opcao');
+    menu.classList.toggle('hidden');
+  });
+</script> 
 @endsection
