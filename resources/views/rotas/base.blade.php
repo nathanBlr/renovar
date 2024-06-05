@@ -67,7 +67,8 @@
 </head>
 <body class="bg-white text-gray-800">
     <header>
-        <nav class="relative  flex w-full flex-wrap items-center justify-between bg-[#E5E7EB] py-2 shadow-md dark:bg-neutral-700 lg:py-4">
+            <nav class="relative lg:fixed top-0 z-50 w-full flex items-center justify-between bg-[#E5E7EB] py-2 shadow-md dark:bg-neutral-700 lg:py-4">
+        
     <div class="flex w-full flex-wrap items-center justify-between px-3">
         <!-- Logo and Title -->
         <div class="flex items-center">
@@ -98,17 +99,19 @@
         </div>
 
         <!-- Navigation Links -->
-        <div id="menu" class="hidden lg:flex lg:flex-row lg:space-x-6 lg:items-center lg:w-auto w-full flex-col mt-4 lg:mt-0">
-            <a href="{{ route('rotas.index','historia') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">História</a>
-            <a href="{{ route('rotas.index','noticias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Notícias</a>
-            <a href="{{ route('rotas.index','valencias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Valências</a>
-            <a href="{{ route('rotas.index','documentacao') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Documentação</a>
-            <a href="{{ route('rotas.index','projetos') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Projetos</a>
-            <a href="{{ route('rotas.index','contatos') }}" class="text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Contatos</a>
-        </div>
-    </div>
-</nav>
+        <div id="menu" class="hidden lg:flex lg:flex-row lg:space-x-6 lg:items-center lg:w-auto w-full mt-4 lg:mt-0">
+    <ol class="lg:flex flex-wrap lg:flex-row lg:space-x-6 lg:items-center lg:w-auto w-full">
+        <li><a href="{{ route('rotas.index','historia') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">História</a></li>
+        <li><a href="{{ route('rotas.index','noticias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Notícias</a></li>
+        <li><a href="{{ route('rotas.index','valencias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Valências</a></li>
+        <li><a href="{{ route('rotas.index','documentacao') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Documentação</a></li>
+        <li><a href="{{ route('rotas.index','projetos') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Projetos</a></li>
+        <li><a href="{{ route('rotas.index','contatos') }}" class="text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Contatos</a></li>
+    </ol>
+</div>
 
+</nav>
+<div class="lg:pt-16"></div>
 <script>
     document.getElementById('menu-button').addEventListener('click', function() {
         var menu = document.getElementById('menu');
@@ -131,7 +134,7 @@
   type="button"
   data-twe-ripple-init
   data-twe-ripple-color="light"
-  class="!fixed bottom-5 end-5 hidden rounded-full bg-[#68c8e3] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+  class="!fixed bottom-5 end-5 hidden rounded-full bg-[#68c8e3] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-lg focus:bg-slate-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-500 active:shadow-lg"
   id="btn-back-to-top">
   <span class="[&>svg]:w-4">
     <svg
@@ -149,14 +152,11 @@
 </button>
     </main>
     <!-- Loading Overlay -->
-
-    
-
     <footer class="bg-gray-200 mt-10 py-6" id="footer">
     <div class="container mx-auto text-center">
         <!-- Social Media Links -->
-        <div class="flex justify-center space-x-2 mb-4">
-            <a href="#" class="loading-link">
+        <div class="flex flex-col justify-center space-x-2 mb-4">
+            <a href="https://www.facebook.com/cmferreiradozezere/" class="loading-link">
             <button
                 type="button"
                 data-twe-ripple-init
@@ -175,7 +175,7 @@
             </button>
         </a>
             <!-- Telegram -->
-            <a href="#" class="loading-link">
+            <a href="https://web.telegram.org/" class="loading-link">
                 <button
                 type="button"
                 data-twe-ripple-init
@@ -194,7 +194,7 @@
                 </button>
             </a>
             <!-- Instagram -->
-            <a href="#" class="loading-link">
+            <a href="https://www.instagram.com/municipiodeferreiradozezere/" class="loading-link">
                 <button
                 type="button"
                 data-twe-ripple-init
@@ -213,7 +213,7 @@
                 </button>
             </a>
                 <!-- Messenger -->
-                <a href="#" class="loading-link">
+                <a href="https://www.messenger.com/" class="loading-link">
                     <button
                     type="button"
                     data-twe-ripple-init
@@ -232,7 +232,7 @@
                     </button>
                 </a>
             <!-- Whatsapp -->
-                <a href="#" class="loading-link">
+                <a href="https://www.whatsapp.com/w/249360190" class="loading-link">
                 <button
                 type="button"
                 data-twe-ripple-init
@@ -253,39 +253,42 @@
         </div>
 <!-- Footer Content -->
         <div class="flex flex-wrap justify-center mt-8">
-            <!-- Contact Form -->
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-                <h2 class="text-xl font-bold mb-4">Contact Us</h2>
-                <form action="#" method="POST">
-                    <div class="mb-4">
-                        <input type="text" name="name" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-4">
-                        <input type="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-4">
-                        <textarea name="message" class="w-full px-4 py-2 border border-gray-300 rounded" placeholder="Your Message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Send</button>
-                </form>
-            </div>
-
-            <!-- Map -->
-            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-                <h2 class="text-xl font-bold mb-4">Our Location</h2>
-                <div class="h-48 md:h-64">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.246492905064!2d-8.294144824024869!3d39.68916147156596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd229d5eb9a065d7%3A0xb8b67318c1e597fd!2sSanta%20Casa%20da%20Miseric%C3%B3rdia%20de%20Ferreira%20do%20Z%C3%AAzere!5e0!3m2!1sen!2spt!4v1717428749997!5m2!1sen!2spt" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-            </div>
-
             <!-- Additional Information -->
             <div class="w-full md:w-1/2 lg:w-1/3 p-4">
-                <h2 class="text-xl font-bold mb-4">Justifiable Information</h2>
+                <h2 class="text-xl font-bold mb-4">Areas de nosso site</h2>
+                <hr class="bg-[#68c8e3]">
+                <ul class="text-left ">
+                    <li class="text-center"><a href="{{ route('rotas.index','historia') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">História</a></li>
+                    <hr class="bg-[#68c8e3]">
+                    <li class="text-center"><a href="{{ route('rotas.index','noticias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Notícias</a></li>
+                    <hr class="bg-[#68c8e3]">
+                    <li class="text-center"><a href="{{ route('rotas.index','valencias') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Valências</a></li>
+                    <hr class="bg-[#68c8e3]">
+                    <li class="text-center"><a href="{{ route('rotas.index','documentacao') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Documentação</a></li>
+                    <hr class="bg-[#68c8e3]">
+                    <li class="text-center"><a href="{{ route('rotas.index','projetos') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Projetos</a></li>
+                    <hr class="bg-[#68c8e3]">
+                    <li class="text-center"><a href="{{ route('rotas.index','contatos') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Contatos</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                <h2 class="text-xl font-bold mb-4">Dias e horarios de funcionamento</h2>
+                <hr class="bg-[#68c8e3]">
                 <ul class="text-left">
-                    <li><strong>Address:</strong> 123 Main Street, Anytown, AN 12345</li>
-                    <li><strong>Phone:</strong> (123) 456-7890</li>
-                    <li><strong>Email:</strong> contact@domain.com</li>
-                    <li><strong>Business Hours:</strong> Mon - Fri: 9:00 AM - 5:00 PM</li>
+                    <li><strong>Segunda a sexta:</strong> 09:00 - 13:00/ 15:00 - 18:00</li>
+                    <hr class="bg-[#68c8e3]">
+                    <li><strong>Sabados:</strong> 11:00 - 13:00/ 15:00 - 16:00</li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                <h2 class="text-xl font-bold mb-4">Contatos</h2>
+                <hr class="bg-[#68c8e3]">
+                <ul class="text-left">
+                    <li><strong>Endereço:</strong> Rua Quinta das Acácias, Ferreira do Zêzere</li>
+                    <hr class="bg-[#68c8e3]">
+                    <li><strong>Telefone:</strong> (+351) 249 360 190</li>
+                    <hr class="bg-[#68c8e3]">
+                    <li><strong>Email:</strong> scmfz@hotmail.com</li>
                 </ul>
             </div>
         </div>

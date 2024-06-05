@@ -32,7 +32,7 @@
         </div>
         <!-- Botão de Contatos -->
         <div class="sm:col-span-2 lg:col-span-3 flex justify-center my-4">
-            <a href="#footer" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="{{ route('rotas.index','contatos') }}" class="loading-link bg-[#68c8e3] text-center hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Clique aqui para entrar em contato conosco, e participar de nossos projetos
             </a>
         </div>
@@ -61,7 +61,7 @@
             </div>
         </div>
     </div>
-    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+    <hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
     <!-- Seção Explicativa -->
     <div class="mt-12 bg-[#E5E7EB] p-6 rounded-lg shadow-md text-center">
         <div class="text-center">

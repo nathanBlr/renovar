@@ -5,16 +5,12 @@
 @section('content')
 <div class="bg-white p-6 rounded shadow-md">
     <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-fredericka">Documentação</h1>
-    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
     <div class="mt-12 bg-gray-200 p-6 rounded-lg shadow-md text-center">
-        <h1 class="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-4 text-center font-serif">Explore nossos arquivos</h1>
+        <h5 class="text-1xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 text-center font-serif">Explore nossos arquivos</h5>
         <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-8 text-center font-serif">Encontre aqui todas as informações essenciais para participar dos nossos programas e projetos.</p>
-        
     </div>
-    
-    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+    <hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
         <div class="bg-white p-6 rounded shadow-md">
-            
             <div class="mt-3">
                 <!-- Categoria 1 -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4">
@@ -43,7 +39,6 @@
                             </a>
                             <a href="your_file2.docx" download="file2.docx" class="inline-block text-blue-500 hover:text-blue-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
-
                                     <defs>
                                     </defs>
                                     <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >

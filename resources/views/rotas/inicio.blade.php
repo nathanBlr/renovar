@@ -12,10 +12,10 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="relative w-full h-full overflow-hidden">
                   <img src="{{ asset('Fotos/fz-vicente-saude-0169990085_818233773257400062_n-780x470.jpg') }}" class="absolute inset-0 w-full h-full object-cover" alt="..." />
-                  <div class="absolute bottom-9 right-9 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
-                    <h5 class="text-xl text-white font-bold mb-2">Card Title</h5>
-                    <p class="text-white text-base">A brief description of the image content.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Learn More</a>
+                  <div class="absolute bottom-[64px] right-12 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
+                    <h5 class="text-xl text-white font-bold mb-2">Novo Centro De Saude</h5>
+                    <p class="text-white text-base">Um centro de saude para a população</p>
+                    <a href="{{ route('rotas.index','noticias') }}" class="loading-link inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#68c8e3] rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Conheça Mais</a>
                   </div>
                 </div>
               </div>
@@ -25,10 +25,10 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="relative w-full h-full overflow-hidden">
                   <img src="{{ asset('Fotos/IMG_4197.JPG') }}" class="absolute inset-0 w-full h-full object-cover" alt="..." />
-                  <div class="absolute bottom-9 right-9 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
-                    <h5 class="text-xl text-white font-bold mb-2">Card Title</h5>
-                    <p class="text-white text-base">A brief description of the image content.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Learn More</a>
+                  <div class="absolute bottom-[64px] right-12 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
+                    <h5 class="text-xl text-white font-bold mb-2">Festas</h5>
+                    <p class="text-white text-base">Festa de São Miguel</p>
+                    <a href="{{ route('rotas.index','noticias') }}" class="loading-link inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#68c8e3] rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Conheça Mais</a>
                   </div>
                 </div>
               </div>
@@ -37,10 +37,10 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="relative w-full h-full overflow-hidden">
                     <img src="{{ asset('Fotos/SCMFZ.jpg') }}" class="absolute inset-0 w-full h-full object-cover" alt="..." />
-                    <div class="absolute bottom-9 right-9 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
-                      <h5 class="text-xl text-white font-bold mb-2">Card Title</h5>
-                      <p class="text-white text-base">A brief description of the image content.</p>
-                      <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Learn More</a>
+                    <div class="absolute bottom-[64px] right-12 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
+                      <h5 class="text-xl text-white font-bold mb-2">Centro de Coleta</h5>
+                      <p class="text-white text-base">Venha participar de nossos projetos</p>
+                      <a href="{{ route('rotas.index','projetos') }}" class="loading-link inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#68c8e3] rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Conheça Mais</a>
                     </div>
                   </div>
             </div>
@@ -48,10 +48,10 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <div class="relative w-full h-full overflow-hidden">
                   <img src="{{ asset('Fotos/rio-zezere.jpg') }}" class="absolute inset-0 w-full h-full object-cover" alt="..." />
-                  <div class="absolute bottom-9 right-9 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
-                    <h5 class="text-xl text-white font-bold mb-2">Card Title</h5>
-                    <p class="text-white text-base">A brief description of the image content.</p>
-                    <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-600 rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Learn More</a>
+                  <div class="absolute bottom-[64px] right-12 flex flex-col justify-end items-end px-6 py-6 bg-gray-900 bg-opacity-50 backdrop-blur-md">
+                    <h5 class="text-xl text-white font-bold mb-2">Caminhada pela Vida</h5>
+                    <p class="text-white text-base">23/06 Venha participar de nossa caminhada</p>
+                    <a href="{{ route('rotas.index','noticias') }}" class="loading-link inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#68c8e3] rounded hover:bg-blue-700 focus:ring-4 focus:ring-blue-500">Conheça Mais</a>
                   </div>
                 </div>
               </div>
@@ -122,7 +122,7 @@
 
 
 <!-- Noticias -->
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
 <section id="noticias" class="container mx-auto mt-16">
   <h2 class="text-3xl font-bold mb-8 text-center">Ultimas Notícias</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -138,7 +138,7 @@
       </div>
   </div>
   <div class="flex justify-center mt-8">
-      <a href="{{ route('rotas.index', 'noticias') }}" class="loading-link bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
+      <a href="{{ route('rotas.index', 'noticias') }}" class="loading-link bg-[#68c8e3] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded text-center">
           <button>
               Noticias
           </button>
@@ -149,7 +149,7 @@
 
 
 <!-- Documentação -->
-  <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+  <hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
   <section id="documentacao" class="container mx-auto mt-8 bg-gray-100 py-4 sm:py-8">
     <div class="max-w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col sm:flex-row">
         <a class="flex-none sm:w-1/2">
@@ -162,8 +162,8 @@
                 </a>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-sm sm:text-base pt-5">Aqui você encontra todos os documentos relacionados à nossa instituição. Explore uma coleção abrangente que abrange diversas áreas de interesse e mantenha-se atualizado com as informações mais recentes. Descubra mais sobre nossas iniciativas, projetos e muito mais.</p>
             </div>
-            <a href="{{ route('rotas.index', 'documentacao')}}" class="inline-block w-full sm:w-auto items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                Read more
+            <a href="{{ route('rotas.index', 'documentacao')}}" class="inline-block w-full sm:w-auto items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#68c8e3] rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Documentação
                 
             </a>
         </div>
@@ -171,22 +171,22 @@
 </section>
 
 <!-- Historia -->
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
 <section id="historia" class="container mx-auto mt-16">
     <h2 class="text-3xl font-bold mb-8 text-center">Conheça um Pouco de Nossa História</h2>
     <div class="w-full">
         <img class="rounded-lg w-full h-auto object-cover" src="{{ asset('Fotos/rio-zezere.jpg') }}" alt="Foto Antiga da Instituição" />
     </div>
     <div class="w-full p-6 md:p-10 text-center">
-        <h2 class="text-4xl font-bold mb-6 text-blue-700">Junte-se a nós e faça a diferença!</h2>
+        <h2 class="text-4xl font-bold mb-6 text-[#68c8e3]">Junte-se a nós e faça a diferença!</h2>
         <p class="text-gray-700 text-lg mb-8">Seja um voluntário, faça uma doação ou participe de um dos nossos eventos. Venha conhecer mais sobre nossa história e como você pode contribuir para um futuro melhor. Nossa trajetória é marcada por muitas conquistas e você pode fazer parte dela!</p>
-        <a href="{{ route('rotas.index', 'historia') }}" class="px-5 py-3 bg-blue-500 text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">Saiba Mais</a>
+        <a href="{{ route('rotas.index', 'historia') }}" class="px-5 py-3 bg-[#68c8e3] text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">Saiba Mais</a>
     </div>
 </section>
 
 
 <!-- Contatos -->
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
 <section class="w-full mx-auto mt-16 bg-gray-100 py-8">
     <div class="w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 p-6">
         <div class="flex flex-col items-center justify-center text-center mb-6">
@@ -199,14 +199,14 @@
             <img class="w-1/4 rounded-lg" src="{{ asset('Fotos/Customer_care.jpg') }}" alt="Imagem 3" />
         </div>
         <div class="flex justify-center">
-            <a href="#footer" class="px-5 py-3 bg-blue-500 text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">Contatos</a>
+            <a href="#footer" class="px-5 py-3 bg-[#68c8e3] text-white text-lg font-semibold rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300">Contatos</a>
         </div>
     </div>
 </section>
 
 
 <!-- Projetos -->
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
 <section id="projetos" class="container mx-auto mt-16 bg-white py-8">
     <div class="flex flex-col items-center justify-center text-center">
         <h2 class="text-3xl font-bold mb-4 font-fredericka">Projetos</h2>
@@ -238,7 +238,7 @@
 
 
 <!-- Galeria -->
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
   <section class="container mx-auto mt-16 bg-gray-100 py-8" >
     <!-- UM CARROUSEL COM AS FOTOS DA GALERIA -->
     <div class="flex flex-col items-center justify-center text-center">
@@ -287,7 +287,7 @@
 
 
   <!-- Valencias -->
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
 <section class="container mx-auto mt-16 bg-gray-100 py-8" >
   <div class="flex justify-center">
     <h2 class="text-3xl font-bold mb-4">Venha Conhecer Nossas Valencias</h2>
@@ -313,10 +313,10 @@
     </div>
 </div>
 <div class="flex justify-center">
-    <a href="{{ route('rotas.index','valencias') }}" class="loading-link px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 mt-4">Saiba Mais</a>
+    <a href="{{ route('rotas.index','valencias') }}" class="loading-link px-4 py-2 bg-[#68c8e3] text-white rounded-lg hover:bg-blue-600 mt-4">Saiba Mais</a>
 </div>
 </section>
-<hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10"/>  
+<hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>  
  
 <script>
   document.getElementById('toggleMenu').addEventListener('click', function() {

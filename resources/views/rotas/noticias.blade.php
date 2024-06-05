@@ -10,12 +10,12 @@
         @for ($i = 1; $i <= 9; $i++)
         <div class="bg-gray-100 p-4 rounded-lg shadow-md relative">
             <img src="{{ asset('Fotos/noticia'.$i.'.jpg') }}" alt="Imagem da notícia" class="w-full h-48 object-cover rounded-md transition-transform duration-300 transform hover:scale-[1.1]">
-            <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+            <div class="absolute top-2 right-2 bg-[#68c8e3] text-white text-xs px-2 py-1 rounded">
                 {{ now()->subDays($i)->format('Y-m-d') }}
             </div>
             <h2 class="text-xl font-semibold mt-4">Notícia {{ $i }}</h2>
             <p class="text-gray-700 mt-2">Breve descrição da notícia {{ $i }}.</p>
-            <a href="#" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            <a href="#" class="mt-4 inline-block bg-[#68c8e3] text-white px-4 py-2 rounded hover:bg-blue-600">
                 Ver mais
             </a>
         </div>
