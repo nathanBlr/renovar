@@ -5,7 +5,7 @@
 @section('content')
 
     <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-fredericka pt-4">Contatos</h1>
-    <hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
+    <hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3]"/>
     <div class="p-6 rounded shadow-md">
         <div class="mt-4 flex flex-col  items-center border-red-700">
             
@@ -19,11 +19,11 @@
         <div class="flex flex-wrap justify-between ">
             <div class="w-full md:w-1/2 lg:w-1/3 p-4 border bg-gray-300 sm:w-1/3 mb-4">
                 <!-- Seu formulário aqui -->
-                <a class="block max-w-sm p-6 mx-auto bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <a class="block max-w-sm p-6 mx-auto bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
                     <hr class="bg-[#68c8e3]">
-                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Morada</h3>
+                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">Morada</h3>
                     <hr class="bg-[#68c8e3]">
-                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">
                         Endereço
                     </h3>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
@@ -42,9 +42,9 @@
                         </g>
                         </svg>
                     
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Rua Quinta das Acácias</p>
+                    <p class="font-normal text-gray-700">Rua Quinta das Acácias</p>
                     <hr class="bg-[#68c8e3]">
-                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">
                         Cidade
                     </h3>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
@@ -94,9 +94,9 @@
                             <rect x="27.39" y="12.52" rx="0" ry="0" width="35.22" height="5.47" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,112,88); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) "/>
                         </g>
                         </svg>
-                    <p class="font-normal text-gray-700 dark:text-gray-400">Ferreira do Zêzere</p>
+                    <p class="font-normal text-gray-700">Ferreira do Zêzere</p>
                     <hr class="bg-[#68c8e3]">
-                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">
                         Codigo Postal
                     </h3>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
@@ -110,39 +110,44 @@
                             <circle cx="52.076" cy="13.456" r="5.056" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,158,154); fill-rule: nonzero; opacity: 1;" transform="  matrix(1 0 0 1 0 0) "/>
                         </g>
                         </svg>
-                        <p class="font-normal text-gray-700 dark:text-gray-400">2240-367</p>
+                        <p class="font-normal text-gray-700">2240-367</p>
                         <hr class="bg-[#68c8e3]">
                 </a>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 p-4 border bg-gray-300">
                 <h2 class="font-sans text-center"> Entre em contato conosco por e-mail</h2>
-                <form class="max-w-sm mx-auto">
+                <form method="post"  class="max-w-sm mx-auto">
+                    @csrf
+                    
                     <div class="mb-5">
-                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome Completo:</label>
-                        <input type="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Yuri Gagarin" required />
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Nome Completo:</label>
+                        <input type="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Yuri Gagarin" required />
                     </div>
                     <div class="mb-5">
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">E-mail:</label>
-                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Jones@gmail.com" required />
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900">E-mail:</label>
+                        <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Jones@gmail.com" required />
                     </div>
                     <div class="mb-5">
-                        <label for="assunto" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Assunto:</label>
-                        <input type="passunto" id="assunto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                        <label for="assunto" class="block mb-2 text-sm font-medium text-gray-900">Assunto:</label>
+                        <input type="text" id="assunto" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required />
                     </div>
                     <div class="mb-5">
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mensagem:</label>
-                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Deixe sua mensagem..."></textarea>
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Mensagem:</label>
+                        <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Deixe sua mensagem..."></textarea>
+                    </div>
+                    <div  class=" mb-5">
+                        {!! htmlFormSnippet() !!}
                     </div>
                     <div class="flex justify-center">
-                        <button type="submit" class="text-white bg-[#68c8e3] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:text-[#68c8e3] dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+                        <button type="submit" class="text-white bg-[#68c8e3] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hover:text-[#68c8e3]">Submit</button>
                     </div>
                 </form>
                 
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 p-4 border bg-gray-300  justify-between w sm:w-1/3 mb-4">
-                <a class="block w-full sm:max-w-sm p-6 mx-auto bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <a class="block w-full sm:max-w-sm p-6 mx-auto bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
                     <hr class="bg-[#68c8e3]">
-                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h3 class="mb-2 text-center text-2xl font-bold tracking-tight text-gray-900">
                         E-mail
                     </h3>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
@@ -159,7 +164,7 @@
                         scmfz@hotmail.com
                     </h5>
                     <hr class="bg-[#68c8e3]">
-                    <h3 class="mb-2 text-center text-2xl sm:text-1x1 font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h3 class="mb-2 text-center text-2xl sm:text-1x1 font-bold tracking-tight text-gray-900">
                         Telefone
                     </h3>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
@@ -173,7 +178,7 @@
                             249 360 190
                         </h5>
                         <hr class="bg-[#68c8e3]">
-                        <h3 class="mb-2 text-center text-[18px] font-bold tracking-tight text-gray-900 dark:text-white">
+                        <h3 class="mb-2 text-center text-[18px] font-bold tracking-tight text-gray-900">
                             Horário de Funcionamento
                         </h3>
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="48" height="48" viewBox="0 0 256 256" xml:space="preserve">
@@ -199,6 +204,7 @@
 <div>
     <div class="et_pb_text_inner"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.888242858937!2d-8.292868091998814!3d39.68791892366686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd229d5eb9a065d7%3A0xb8b67318c1e597fd!2sSanta%20Casa%20da%20Miseric%C3%B3rdia%20de%20Ferreira%20do%20Z%C3%AAzere!5e1!3m2!1sen!2spt!4v1717511021577!5m2!1sen!2spt" width="100%" height="70%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 </div>
+<!--action= "route('send_mail') ""-->
 
     
     

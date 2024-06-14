@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NoticiaController;
 use App\Http\Controllers\RotasController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
  Route::prefix('/')->group(function(){
+   Route::get('/', function(){
+      return redirect()->route('rotas.index','inicio');
+   });
     Route::get('/{nome}', [RotasController::class, 'index'])->name('rotas.index');
  });
-
+ Route::prefix('/noticias')->group(function(){
+    Route::get('/{slug}', [NoticiaController::class, 'show'])->name('noticias.show');
+ });

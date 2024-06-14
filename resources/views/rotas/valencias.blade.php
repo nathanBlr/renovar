@@ -5,6 +5,7 @@
 @section('content')
 <div class="bg-white p-6 rounded shadow-md">
     <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-center font-fredericka">Valências</h1>
+    <hr class="my-12 h-0.5 border-t-0 bg-[#68c8e3] dark:bg-white/10"/>
     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1: Centros De Saude -->
         <div class="bg-gray-100 p-4 rounded-lg shadow-md">

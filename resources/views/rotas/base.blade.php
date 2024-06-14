@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
     />
-
+    
     <style>
         @yield('style')
         /* Dark Mode Classes */
@@ -63,7 +64,7 @@
         }
 
     </style>
-
+    {!! htmlScriptTagJsApi(['lang' => 'en']) !!}
 </head>
 <body class="bg-white text-gray-800">
     <header>
@@ -107,6 +108,7 @@
         <li><a href="{{ route('rotas.index','documentacao') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Documentação</a></li>
         <li><a href="{{ route('rotas.index','projetos') }}" class="loading-link text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Projetos</a></li>
         <li><a href="{{ route('rotas.index','contatos') }}" class="text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Contatos</a></li>
+        <li><a href="/admin" class="text-black/60 transition duration-200 hover:text-black/80 focus:text-black/80 dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80">Login</a></li>
     </ol>
 </div>
 
@@ -129,34 +131,33 @@
 
     <main class=" justify-center">
         @yield('content')
-        <!-- Back to top button -->
-<button
-  type="button"
-  data-twe-ripple-init
-  data-twe-ripple-color="light"
-  class="!fixed bottom-5 end-5 hidden rounded-full bg-[#68c8e3] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-lg focus:bg-slate-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-500 active:shadow-lg"
-  id="btn-back-to-top">
-  <span class="[&>svg]:w-4">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="3"
-      stroke="currentColor">
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-    </svg>
-  </span>
-</button>
+        <button
+        type="button"
+        data-twe-ripple-init
+        data-twe-ripple-color="light"
+        class="!fixed bottom-5 end-5 hidden rounded-full bg-[#68c8e3] p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-gray-800 hover:shadow-lg focus:bg-slate-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-500 active:shadow-lg"
+        id="btn-back-to-top">
+        <span class="[&>svg]:w-4">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="3"
+            stroke="currentColor">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+            </svg>
+        </span>
+        </button>
     </main>
     <!-- Loading Overlay -->
     <footer class="bg-gray-200 mt-10 py-6" id="footer">
     <div class="container mx-auto text-center">
         <!-- Social Media Links -->
-        <div class="flex flex-col justify-center space-x-2 mb-4">
-            <a href="https://www.facebook.com/cmferreiradozezere/" class="loading-link">
+        <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
+            <a href="https://www.facebook.com/cmferreiradozezere/" class="loading-link sm:inline-block">
             <button
                 type="button"
                 data-twe-ripple-init
@@ -175,7 +176,7 @@
             </button>
         </a>
             <!-- Telegram -->
-            <a href="https://web.telegram.org/" class="loading-link">
+            <a href="https://web.telegram.org/" class="loading-link sm:inline-block">
                 <button
                 type="button"
                 data-twe-ripple-init
@@ -194,7 +195,7 @@
                 </button>
             </a>
             <!-- Instagram -->
-            <a href="https://www.instagram.com/municipiodeferreiradozezere/" class="loading-link">
+            <a href="https://www.instagram.com/municipiodeferreiradozezere/" class="loading-link sm:inline-block">
                 <button
                 type="button"
                 data-twe-ripple-init
@@ -213,7 +214,7 @@
                 </button>
             </a>
                 <!-- Messenger -->
-                <a href="https://www.messenger.com/" class="loading-link">
+                <a href="https://www.messenger.com/" class="loading-link sm:inline-block">
                     <button
                     type="button"
                     data-twe-ripple-init
@@ -232,7 +233,7 @@
                     </button>
                 </a>
             <!-- Whatsapp -->
-                <a href="https://www.whatsapp.com/w/249360190" class="loading-link">
+                <a href="https://www.whatsapp.com/w/249360190" class="loading-link sm:inline-block">
                 <button
                 type="button"
                 data-twe-ripple-init
